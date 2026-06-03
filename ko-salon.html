@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Primary -->
+  <title>KO Salon Condesa — Peluquería & Coloración Premium | CDMX</title>
+  <meta name="description" content="KO Salon Condesa: cortes de autor, coloración, mechas, balayage y tratamientos con Olaplex, Davines y Moroccanoil. Av Sonora 140, Colonia Condesa, Ciudad de México.">
+  <meta name="keywords" content="peluquería condesa, salon belleza cdmx, corte cabello condesa, coloración condesa, balayage cdmx, mechas cdmx, olaplex mexico, davines salon condesa, moroccanoil salon, estilista condesa, peluquería premium cdmx, ko salon condesa">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="KO Salon Condesa">
+  <link rel="canonical" href="https://ko.salon" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:title" content="KO Salon Condesa — Peluquería Premium CDMX">
+  <meta property="og:description" content="Cortes, coloración y tratamientos de autor en el corazón de la Condesa. Davines · Moroccanoil · Olaplex.">
+  <meta property="og:url" content="https://ko.salon">
+  <meta property="og:site_name" content="KO Salon Condesa">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KO Salon Condesa">
+  <meta name="twitter:description" content="Peluquería premium en Condesa, CDMX.">
+
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "KO Salon Condesa",
+    "url": "https://ko.salon",
+    "telephone": ["+52-55-7426-5410", "+52-55-5211-0087"],
+    "image": "https://ko.salon/og-image.jpg",
+    "priceRange": "$$",
+    "servesCuisine": null,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av Sonora 140",
+      "addressLocality": "Colonia Condesa",
+      "addressRegion": "Ciudad de México",
+      "postalCode": "06140",
+      "addressCountry": "MX"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "19.4133",
+      "longitude": "-99.1698"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday"],
+        "opens": "09:00",
+        "closes": "16:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/ko.salon/",
+      "https://www.facebook.com/KoSalonCDMX/"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios KO Salon",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Corte de cabello"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Coloración"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mechas y Balayage"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tratamiento Olaplex"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Brushing y Styling"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Alisado y Keratina"}}
+      ]
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Lenis smooth scroll -->
+  <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+
+  <style>
+    /* ============================================================
+       RESET
+    ============================================================ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg:        #060606;
+      --bg-2:      #0E0C09;
+      --cream:     #EDE8DF;
+      --cream-mid: rgba(237,232,223,0.55);
+      --cream-dim: rgba(237,232,223,0.22);
+      --gold:      #C09A52;
+      --gold-glow: rgba(192,154,82,0.12);
+      --line:      rgba(237,232,223,0.09);
+      --serif:     'Cormorant Garamond', Georgia, serif;
+      --sans:      'DM Sans', system-ui, sans-serif;
+    }
+
+    html { font-size: 16px; cursor: none; scroll-behavior: auto; }
+
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: var(--sans);
+      font-weight: 300;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a { color: inherit; text-decoration: none; cursor: none; }
+    button { cursor: none; }
+    img, video { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+    /* ============================================================
+       CURSOR
+    ============================================================ */
+    #cur-dot {
+      position: fixed; top: 0; left: 0; z-index: 9999;
+      width: 8px; height: 8px;
+      background: var(--cream);
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%,-50%);
+      transition: width .25s, height .25s, background .25s;
+      mix-blend-mode: difference;
+    }
+
+    #cur-ring {
+      position: fixed; top: 0; left: 0; z-index: 9998;
+      width: 36px; height: 36px;
+      border: 1px solid rgba(237,232,223,0.4);
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%,-50%);
+      transition: width .4s cubic-bezier(.4,0,.2,1),
+                  height .4s cubic-bezier(.4,0,.2,1),
+                  border-color .3s,
+                  opacity .3s;
+    }
+
+    #cur-label {
+      position: fixed; top: 0; left: 0; z-index: 9997;
+      pointer-events: none;
+      font-family: var(--sans);
+      font-size: 9px; font-weight: 500;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--bg);
+      transform: translate(-50%,-50%);
+      opacity: 0;
+      transition: opacity .2s;
+    }
+
+    body.c-link #cur-dot   { width: 56px; height: 56px; background: var(--gold); mix-blend-mode: normal; }
+    body.c-link #cur-ring  { opacity: 0; }
+    body.c-link #cur-label { opacity: 1; }
+    body.c-img  #cur-dot   { width: 72px; height: 72px; background: rgba(192,154,82,.15); mix-blend-mode: normal; }
+    body.c-img  #cur-ring  { width: 72px; height: 72px; border-color: var(--gold); }
+
+    /* ============================================================
+       LOADER
+    ============================================================ */
+    #loader {
+      position: fixed; inset: 0; z-index: 8000;
+      background: var(--bg);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 2.5rem;
+    }
+
+    .ld-logo {
+      font-family: var(--serif);
+      font-size: clamp(5rem, 14vw, 11rem);
+      font-weight: 300; letter-spacing: .3em;
+      overflow: hidden; line-height: 1;
+    }
+
+    .ld-logo span {
+      display: inline-block;
+      transform: translateY(120%);
+      will-change: transform;
+    }
+
+    .ld-bar {
+      width: 180px; height: 1px;
+      background: var(--line); overflow: hidden;
+      position: relative;
+    }
+
+    .ld-fill {
+      position: absolute; top: 0; left: -100%;
+      height: 100%; width: 100%;
+      background: var(--gold);
+      animation: ldFill 1.5s cubic-bezier(.4,0,.2,1) forwards;
+    }
+
+    @keyframes ldFill { to { left: 0; } }
+
+    /* ============================================================
+       NAV
+    ============================================================ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 500;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 2rem 3.5rem;
+      mix-blend-mode: difference;
+      transition: padding .4s ease;
+    }
+
+    nav.scrolled { padding: 1.3rem 3.5rem; mix-blend-mode: normal; }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.6rem; font-weight: 400;
+      letter-spacing: .35em; text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex; gap: 2.8rem; list-style: none;
+    }
+
+    .nav-links a {
+      font-size: .68rem; font-weight: 400;
+      letter-spacing: .2em; text-transform: uppercase;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: ''; position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 1px;
+      background: currentColor;
+      transition: width .4s cubic-bezier(.4,0,.2,1);
+    }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      font-size: .68rem; font-weight: 400;
+      letter-spacing: .2em; text-transform: uppercase;
+      border: 1px solid currentColor;
+      padding: .6rem 1.5rem;
+      position: relative; overflow: hidden;
+      transition: color .4s ease;
+    }
+    .nav-cta::before {
+      content: ''; position: absolute; inset: 0;
+      background: var(--cream);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .4s cubic-bezier(.4,0,.2,1);
+    }
+    .nav-cta:hover { color: var(--bg); }
+    .nav-cta:hover::before { transform: scaleX(1); }
+    .nav-cta em { position: relative; z-index: 1; font-style: normal; }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #hero {
+      height: 100vh; min-height: 600px;
+      display: flex; flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 3.5rem 5rem;
+      position: relative; overflow: hidden;
+    }
+
+    .hero-ambient {
+      position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 70% 60% at 75% 15%, rgba(192,154,82,.06) 0%, transparent 100%),
+        radial-gradient(ellipse 50% 40% at 10% 85%, rgba(192,154,82,.04) 0%, transparent 100%);
+    }
+
+    .hero-grain {
+      position: absolute; inset: 0; pointer-events: none; opacity: .04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px;
+    }
+
+    .hero-eyebrow {
+      font-size: .65rem; font-weight: 400;
+      letter-spacing: .32em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.8rem;
+      overflow: hidden;
+    }
+    .hero-eyebrow span { display: inline-block; transform: translateY(110%); }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(6rem, 22vw, 22rem);
+      font-weight: 300; line-height: .88;
+      letter-spacing: -.015em;
+      user-select: none;
+      position: relative; z-index: 1;
+    }
+
+    .hero-title .line { display: block; overflow: hidden; }
+    .hero-title .line span { display: block; transform: translateY(112%); will-change: transform; }
+    .hero-title .dim { color: var(--cream-dim); font-style: italic; }
+
+    .hero-bottom {
+      display: flex; align-items: flex-end;
+      justify-content: space-between;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .hero-sub {
+      max-width: 300px;
+      font-size: .84rem; line-height: 1.75;
+      color: var(--cream-mid);
+      overflow: hidden;
+    }
+    .hero-sub span { display: block; transform: translateY(110%); }
+
+    .scroll-hint {
+      display: flex; align-items: center; gap: 1rem;
+      font-size: .6rem; letter-spacing: .25em;
+      text-transform: uppercase; color: var(--cream-dim);
+    }
+
+    .scroll-track {
+      width: 50px; height: 1px;
+      background: var(--line); position: relative; overflow: hidden;
+    }
+    .scroll-track::after {
+      content: ''; position: absolute;
+      top: 0; left: -100%;
+      height: 1px; width: 100%;
+      background: var(--gold);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse { 50% { left: 0; } 100% { left: 100%; } }
+
+
+    /* ============================================================
+       SECTION COMMON
+    ============================================================ */
+    .s-tag {
+      display: inline-flex; align-items: center; gap: 1rem;
+      font-size: .62rem; font-weight: 400;
+      letter-spacing: .3em; text-transform: uppercase;
+      color: var(--gold);
+    }
+    .s-tag::before {
+      content: ''; display: block;
+      width: 32px; height: 1px; background: var(--gold);
+    }
+
+    .s-title {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 5vw, 5.5rem);
+      font-weight: 300; line-height: 1.05;
+    }
+    .s-title em { font-style: italic; color: var(--cream-dim); }
+
+    /* ============================================================
+       ABOUT
+    ============================================================ */
+    #about {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 7rem; align-items: center;
+      padding: 11rem 3.5rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .about-s-tag { margin-bottom: 2.5rem; }
+    .about-headline { margin-bottom: 2rem; }
+
+    .about-body {
+      font-size: .88rem; line-height: 1.9;
+      color: var(--cream-mid); max-width: 380px;
+      margin-bottom: 3.5rem;
+    }
+
+    .underline-btn {
+      display: inline-flex; align-items: center; gap: .9rem;
+      font-size: .68rem; font-weight: 400;
+      letter-spacing: .22em; text-transform: uppercase;
+      position: relative; padding-bottom: 4px;
+    }
+    .underline-btn::after {
+      content: ''; position: absolute;
+      bottom: 0; left: 0; width: 100%; height: 1px;
+      background: var(--cream);
+      transform: scaleX(0); transform-origin: right;
+      transition: transform .5s cubic-bezier(.4,0,.2,1);
+    }
+    .underline-btn:hover::after { transform: scaleX(1); transform-origin: left; }
+    .ub-arrow { transition: transform .3s ease; }
+    .underline-btn:hover .ub-arrow { transform: translateX(6px); }
+
+    .about-visual { position: relative; }
+
+    .about-frame {
+      aspect-ratio: 3/4;
+      background: var(--bg-2);
+      overflow: hidden; position: relative;
+    }
+
+    .about-frame img {
+      transition: transform .7s cubic-bezier(.4,0,.2,1);
+    }
+    .about-frame:hover img { transform: scale(1.04); }
+
+    /* placeholder graphic inside frames */
+    .frame-ph {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 1rem;
+    }
+
+    .frame-ph-icon {
+      width: 44px; height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--cream-dim);
+    }
+
+    .frame-ph-text {
+      font-size: .6rem; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--cream-dim);
+    }
+
+    .about-badge {
+      position: absolute; top: 2.5rem; left: -3.5rem;
+      background: var(--bg); border: 1px solid var(--line);
+      padding: 1.5rem 2rem;
+      z-index: 2;
+    }
+
+    .badge-num {
+      font-family: var(--serif);
+      font-size: 3.2rem; font-weight: 300;
+      color: var(--gold); line-height: 1;
+    }
+
+    .badge-label {
+      font-size: .58rem; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--cream-dim);
+      margin-top: .4rem;
+    }
+
+    /* ============================================================
+       SERVICES
+    ============================================================ */
+    #services {
+      padding: 11rem 3.5rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .services-head {
+      display: flex; align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 5rem;
+    }
+
+    .srv-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+    }
+
+    .srv-item {
+      padding: 2.8rem 0;
+      border-top: 1px solid var(--line);
+      display: flex; align-items: flex-start; gap: 2rem;
+      position: relative; overflow: hidden;
+    }
+
+    .srv-item:nth-child(odd)  { padding-right: 4rem; border-right: 1px solid var(--line); }
+    .srv-item:nth-child(even) { padding-left: 4rem; }
+
+    .srv-hover-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, var(--gold-glow), transparent);
+      transform: scaleY(0); transform-origin: bottom;
+      transition: transform .5s cubic-bezier(.4,0,.2,1);
+    }
+    .srv-item:hover .srv-hover-bg { transform: scaleY(1); }
+
+    .srv-num {
+      font-family: var(--serif);
+      font-size: .9rem; font-weight: 300;
+      color: var(--gold); flex-shrink: 0;
+      padding-top: .3rem;
+    }
+
+    .srv-body { flex: 1; position: relative; }
+
+    .srv-name {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+      font-weight: 300; margin-bottom: .8rem;
+      transition: transform .4s cubic-bezier(.4,0,.2,1);
+    }
+    .srv-item:hover .srv-name { transform: translateX(10px); }
+
+    .srv-desc {
+      font-size: .82rem; line-height: 1.75;
+      color: var(--cream-mid); max-width: 280px;
+    }
+
+    .srv-arrow {
+      position: absolute; bottom: 0; right: 0;
+      font-size: 1.1rem; color: var(--gold);
+      opacity: 0;
+      transform: translate(-8px, 8px);
+      transition: opacity .3s, transform .3s ease;
+    }
+    .srv-item:hover .srv-arrow { opacity: 1; transform: translate(0,0); }
+
+    /* ============================================================
+       BRANDS
+    ============================================================ */
+    #brands {
+      padding: 9rem 3.5rem;
+      border-top: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .brands-eyebrow {
+      font-size: .62rem; letter-spacing: .32em;
+      text-transform: uppercase; color: var(--cream-dim);
+      margin-bottom: 5rem;
+    }
+
+    .brands-row {
+      display: flex; align-items: center;
+      justify-content: center; gap: 6rem;
+      flex-wrap: wrap;
+    }
+
+    .brand-word {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 3vw, 2.8rem);
+      font-weight: 300; letter-spacing: .1em;
+      color: var(--cream-dim);
+      position: relative;
+      transition: color .4s ease;
+    }
+    .brand-word::after {
+      content: ''; position: absolute;
+      bottom: -5px; left: 0; width: 100%; height: 1px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform .4s cubic-bezier(.4,0,.2,1);
+    }
+    .brand-word:hover { color: var(--cream); }
+    .brand-word:hover::after { transform: scaleX(1); }
+
+    /* ============================================================
+       MAGAZINE SLIDER
+    ============================================================ */
+    #gallery {
+      border-top: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .gallery-head {
+      padding: 5rem 3.5rem 3rem;
+      display: flex; align-items: flex-end;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .gallery-hint {
+      font-size: .68rem; letter-spacing: .15em;
+      color: var(--cream-dim); max-width: 220px;
+      text-align: right; line-height: 1.6;
+    }
+
+    /* Slider container */
+    .mag-slider {
+      position: relative; width: 100%;
+      height: 85vh; min-height: 520px;
+      overflow: hidden; user-select: none;
+    }
+
+    .mag-track {
+      display: flex; height: 100%;
+      will-change: transform;
+    }
+
+    .mag-slide {
+      position: relative;
+      width: 100%; flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    /* image layer with extra height for parallax */
+    .mag-img {
+      position: absolute;
+      top: -12%; left: 0; right: 0;
+      height: 124%;
+      will-change: transform;
+    }
+
+    .mag-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+
+    /* cinematic gradient */
+    .mag-slide::after {
+      content: ''; position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(
+        160deg,
+        rgba(6,6,6,0) 25%,
+        rgba(6,6,6,.15) 55%,
+        rgba(6,6,6,.88) 100%
+      );
+    }
+
+    /* text overlay at bottom */
+    .mag-copy {
+      position: absolute; bottom: 0; left: 0; right: 0; z-index: 2;
+      padding: 6rem 3.5rem 3.5rem;
+      display: flex; align-items: flex-end;
+      justify-content: space-between; gap: 3rem;
+    }
+
+    .mag-srv {
+      font-size: .62rem; letter-spacing: .32em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 1.2rem; overflow: hidden;
+    }
+    .mag-srv span { display: block; }
+
+    .mag-title {
+      font-family: var(--serif);
+      font-size: clamp(3.5rem, 8vw, 8.5rem);
+      font-weight: 300; line-height: .9;
+      color: var(--cream); overflow: hidden;
+    }
+    .mag-title span { display: block; }
+
+    .mag-caption {
+      max-width: 210px; text-align: right;
+      font-size: .8rem; line-height: 1.8;
+      color: var(--cream-mid);
+    }
+
+    /* HUD: counter + arrows (top right) */
+    .mag-hud {
+      position: absolute; top: 0; right: 0; z-index: 20;
+      display: flex; align-items: center; gap: 1.2rem;
+      padding: 2.5rem 3.5rem;
+    }
+
+    .mag-count {
+      font-family: var(--serif);
+      font-size: 1rem; font-weight: 300;
+      color: var(--cream-mid); letter-spacing: .06em;
+      min-width: 56px; text-align: center;
+    }
+
+    .mag-btn {
+      width: 46px; height: 46px;
+      border: 1px solid rgba(237,232,223,.22);
+      border-radius: 50%;
+      background: rgba(6,6,6,.45);
+      backdrop-filter: blur(10px);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--cream); font-size: .9rem;
+      transition: background .3s ease, border-color .3s ease, color .3s ease;
+    }
+    .mag-btn:hover {
+      background: var(--gold); border-color: var(--gold); color: var(--bg);
+    }
+
+    /* bottom progress bar */
+    .mag-bar {
+      position: absolute; bottom: 0; left: 0;
+      width: 100%; height: 2px; z-index: 20;
+      background: var(--line);
+    }
+    .mag-bar-fill {
+      height: 100%; background: var(--gold);
+      transition: width .7s cubic-bezier(.4,0,.2,1);
+    }
+
+    /* drag state */
+    .mag-slider.is-dragging { cursor: grabbing; }
+
+    /* responsive */
+    @media (max-width: 760px) {
+      .gallery-head { flex-direction: column; gap: 1rem; align-items: flex-start; padding: 3.5rem 1.8rem 2rem; }
+      .gallery-hint { text-align: left; }
+      .mag-slider { height: 70vh; }
+      .mag-copy { padding: 4rem 1.8rem 2.5rem; flex-direction: column; gap: 1rem; }
+      .mag-caption { text-align: left; max-width: 100%; }
+      .mag-hud { padding: 1.5rem 1.8rem; }
+    }
+
+    /* ============================================================
+       CONTACT
+    ============================================================ */
+    #contact {
+      padding: 11rem 3.5rem;
+      border-top: 1px solid var(--line);
+      display: grid; grid-template-columns: 1.1fr 1fr;
+      gap: 7rem; align-items: start;
+    }
+
+    .contact-headline {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 5.5vw, 6rem);
+      font-weight: 300; line-height: 1.05;
+      margin-bottom: 3.5rem;
+    }
+    .contact-headline em { font-style: italic; color: var(--cream-dim); }
+
+    /* Primary fill button */
+    .btn-fill {
+      display: inline-flex; align-items: center; gap: 1.2rem;
+      background: var(--gold); color: var(--bg);
+      padding: 1.05rem 2.8rem;
+      font-size: .68rem; font-weight: 500;
+      letter-spacing: .24em; text-transform: uppercase;
+      position: relative; overflow: hidden;
+      transition: color .45s ease;
+    }
+    .btn-fill::before {
+      content: ''; position: absolute; inset: 0;
+      background: var(--bg-2);
+      transform: scaleX(0); transform-origin: right;
+      transition: transform .45s cubic-bezier(.4,0,.2,1);
+    }
+    .btn-fill:hover { color: var(--gold); }
+    .btn-fill:hover::before { transform: scaleX(1); transform-origin: left; }
+    .btn-fill span { position: relative; z-index: 1; }
+
+    .contact-info { padding-top: .5rem; }
+
+    .ci-block {
+      padding: 2.4rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .ci-block:first-child { border-top: 1px solid var(--line); }
+
+    .ci-label {
+      font-size: .58rem; letter-spacing: .3em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .ci-val {
+      font-family: var(--serif);
+      font-size: 1.5rem; font-weight: 300;
+      line-height: 1.55;
+    }
+
+    .ci-val a {
+      transition: color .3s ease;
+    }
+    .ci-val a:hover { color: var(--gold); }
+
+    .hours-table { display: grid; gap: .55rem; }
+    .hours-row {
+      display: flex; justify-content: space-between;
+      font-family: var(--sans);
+      font-size: .85rem; line-height: 1.5;
+      color: var(--cream-mid);
+    }
+    .hours-row .day { color: var(--cream); font-weight: 400; }
+
+    /* ============================================================
+       KO BIG FOOTER TEXT
+    ============================================================ */
+    .ko-large {
+      padding: 0 3.5rem;
+      overflow: hidden;
+      border-top: 1px solid var(--line);
+    }
+
+    .ko-large-text {
+      font-family: var(--serif);
+      font-size: clamp(8rem, 25vw, 26rem);
+      font-weight: 300; line-height: .85;
+      color: var(--cream-dim);
+      letter-spacing: -.02em;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      padding: 2.5rem 3.5rem;
+      border-top: 1px solid var(--line);
+      display: flex; align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap; gap: 1.5rem;
+    }
+
+    .ft-logo {
+      font-family: var(--serif);
+      font-size: 1.2rem; letter-spacing: .3em;
+    }
+
+    .ft-copy {
+      font-size: .6rem; letter-spacing: .15em;
+      color: var(--cream-dim);
+    }
+
+    .ft-links {
+      display: flex; gap: 2rem;
+    }
+    .ft-links a {
+      font-size: .6rem; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--cream-dim);
+      transition: color .3s ease;
+    }
+    .ft-links a:hover { color: var(--gold); }
+
+    /* ============================================================
+       ANIMATION HELPERS
+    ============================================================ */
+    .reveal { overflow: hidden; }
+    .reveal-child { transform: translateY(108%); will-change: transform; }
+    .fade-in { opacity: 0; transform: translateY(32px); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 960px) {
+      nav { padding: 1.5rem 1.8rem; }
+      .nav-links { display: none; }
+
+      #hero { padding: 0 1.8rem 4rem; }
+
+      #about {
+        grid-template-columns: 1fr;
+        gap: 4rem; padding: 7rem 1.8rem;
+      }
+      .about-badge { left: 0; top: auto; bottom: -2.5rem; }
+
+      #services { padding: 7rem 1.8rem; }
+      .services-head { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+      .srv-grid { grid-template-columns: 1fr; }
+      .srv-item:nth-child(odd)  { padding-right: 0; border-right: none; }
+      .srv-item:nth-child(even) { padding-left: 0; }
+
+      #brands { padding: 6rem 1.8rem; }
+      .brands-row { gap: 3rem; }
+
+      #gallery { padding: 5rem 1.8rem 7rem; }
+      .gal-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+      .gi-1,.gi-2,.gi-3,.gi-4,.gi-5 {
+        grid-column: auto; grid-row: auto;
+        aspect-ratio: 3/4;
+      }
+
+      #contact {
+        grid-template-columns: 1fr;
+        gap: 4rem; padding: 7rem 1.8rem;
+      }
+
+      .ko-large { padding: 0 1.8rem; }
+
+      footer {
+        flex-direction: column; align-items: flex-start;
+        padding: 2rem 1.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .brands-row { gap: 2rem; }
+      .brand-word { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Cursor ── -->
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+<div id="cur-label">Ver</div>
+
+<!-- ── Loader ── -->
+<div id="loader">
+  <div class="ld-logo">
+    <span>K</span><span>O</span>
+  </div>
+  <div class="ld-bar"><div class="ld-fill"></div></div>
+</div>
+
+<!-- ── Nav ── -->
+<nav id="nav">
+  <a href="#" class="nav-logo">KO</a>
+  <ul class="nav-links">
+    <li><a href="#services">Servicios</a></li>
+    <li><a href="#about">Nosotros</a></li>
+    <li><a href="#gallery">Galería</a></li>
+    <li><a href="#contact">Contacto</a></li>
+  </ul>
+  <a href="https://wa.me/5574265410" target="_blank" rel="noopener" class="nav-cta">
+    <em>Reservar</em>
+  </a>
+</nav>
+
+<!-- ── Hero ── -->
+<section id="hero">
+  <div class="hero-ambient"></div>
+  <div class="hero-grain"></div>
+
+  <div class="hero-eyebrow">
+    <span>Condesa &mdash; Ciudad de México</span>
+  </div>
+
+  <h1 class="hero-title">
+    <span class="line"><span>KO</span></span>
+    <span class="line"><span class="dim">Salon</span></span>
+  </h1>
+
+  <div class="hero-bottom">
+    <p class="hero-sub">
+      <span>Espacio de belleza contemporáneo en el corazón de la Condesa. Corte, color y tratamientos con los mejores productos del mundo.</span>
+    </p>
+    <div class="scroll-hint">
+      <span>Descubrir</span>
+      <div class="scroll-track"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── About ── -->
+<section id="about">
+  <div class="about-text">
+    <div class="s-tag about-s-tag fade-in">01 / Nosotros</div>
+    <h2 class="s-title about-headline fade-in">
+      Arte y técnica<br>en <em>perfecta</em><br>armonía
+    </h2>
+    <p class="about-body fade-in">
+      En KO Salon creemos que cada cabello cuenta una historia única.
+      Nuestro equipo de estilistas trabaja con Davines, Moroccanoil y Olaplex
+      para crear resultados que transforman y que duran.
+      No hacemos cortes genéricos — hacemos tu corte.
+    </p>
+    <a href="#contact" class="underline-btn fade-in">
+      Agenda tu cita <span class="ub-arrow">→</span>
+    </a>
+  </div>
+
+  <div class="about-visual">
+    <div class="about-badge fade-in">
+      <div class="badge-num">3</div>
+      <div class="badge-label">Marcas premium</div>
+    </div>
+    <div class="about-frame">
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=85&auto=format&fit=crop&crop=faces" alt="Estilista KO Salon Condesa" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ── Services ── -->
+<section id="services">
+  <div class="services-head">
+    <div>
+      <div class="s-tag fade-in">02 / Servicios</div>
+      <h2 class="s-title fade-in" style="margin-top:1rem">
+        Lo que<br>hacemos <em>mejor</em>
+      </h2>
+    </div>
+    <a href="#contact" class="underline-btn fade-in" style="padding-bottom:4px">
+      Agendar ahora <span class="ub-arrow">→</span>
+    </a>
+  </div>
+
+  <div class="srv-grid">
+    <div class="srv-item">
+      <div class="srv-hover-bg"></div>
+      <span class="srv-num">01</span>
+      <div class="srv-body">
+        <div class="srv-name">Corte</div>
+        <p class="srv-desc">Diagnóstico personalizado. Técnica y precisión adaptada a tu tipo de cabello y estilo de vida.</p>
+        <span class="srv-arrow">↗</span>
+      </div>
+    </div>
+
+    <div class="srv-item">
+      <div class="srv-hover-bg"></div>
+      <span class="srv-num">02</span>
+      <div class="srv-body">
+        <div class="srv-name">Coloración</div>
+        <p class="srv-desc">Color vibrante, protegido y duradero. Formulamos cada matiz para que se vea natural y luminoso.</p>
+        <span class="srv-arrow">↗</span>
+      </div>
+    </div>
+
+    <div class="srv-item">
+      <div class="srv-hover-bg"></div>
+      <span class="srv-num">03</span>
+      <div class="srv-body">
+        <div class="srv-name">Mechas &amp; Balayage</div>
+        <p class="srv-desc">Degradados naturales, mechas a mano y técnicas de luz. El arte del color con movimiento propio.</p>
+        <span class="srv-arrow">↗</span>
+      </div>
+    </div>
+
+    <div class="srv-item">
+      <div class="srv-hover-bg"></div>
+      <span class="srv-num">04</span>
+      <div class="srv-body">
+        <div class="srv-name">Tratamientos</div>
+        <p class="srv-desc">Olaplex, Davines y Moroccanoil para restaurar, nutrir y transformar la salud de tu cabello desde adentro.</p>
+        <span class="srv-arrow">↗</span>
+      </div>
+    </div>
+
+    <div class="srv-item">
+      <div class="srv-hover-bg"></div>
+      <span class="srv-num">05</span>
+      <div class="srv-body">
+        <div class="srv-name">Brushing &amp; Styling</div>
+        <p class="srv-desc">Acabados impecables para cualquier ocasión. De lo cotidiano a lo extraordinario, sin esfuerzo.</p>
+        <span class="srv-arrow">↗</span>
+      </div>
+    </div>
+
+    <div class="srv-item">
+      <div class="srv-hover-bg"></div>
+      <span class="srv-num">06</span>
+      <div class="srv-body">
+        <div class="srv-name">Alisado &amp; Keratina</div>
+        <p class="srv-desc">Fórmulas de última generación para un cabello liso, suave y libre de frizz durante meses.</p>
+        <span class="srv-arrow">↗</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Brands ── -->
+<section id="brands">
+  <p class="brands-eyebrow fade-in">Trabajamos exclusivamente con marcas premium</p>
+  <div class="brands-row">
+    <span class="brand-word fade-in">Davines</span>
+    <span class="brand-word fade-in">Moroccanoil</span>
+    <span class="brand-word fade-in">Olaplex</span>
+  </div>
+</section>
+
+<!-- ── Gallery ── -->
+<section id="gallery">
+  <div class="gallery-head fade-in">
+    <div>
+      <div class="s-tag">03 / Galería</div>
+      <h2 class="s-title" style="margin-top:.8rem">Nuestro <em>trabajo</em></h2>
+    </div>
+    <p class="gallery-hint">
+      Reemplaza con fotos reales de tu Instagram @ko.salon
+    </p>
+  </div>
+
+  <div class="mag-slider" id="magSlider">
+    <div class="mag-track" id="magTrack">
+
+      <!-- Slide 1 -->
+      <div class="mag-slide">
+        <div class="mag-img">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1800&q=85&auto=format&fit=crop" alt="Coloración KO Salon Condesa">
+        </div>
+        <div class="mag-copy">
+          <div class="mag-left">
+            <div class="mag-srv"><span>01 &mdash; Coloración</span></div>
+            <div class="mag-title"><span>El color</span><span>que te define</span></div>
+          </div>
+          <p class="mag-caption">Formulamos cada matiz para que se vea natural, luminoso y duradero.</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="mag-slide">
+        <div class="mag-img">
+          <img src="https://images.unsplash.com/photo-1519699613082-40e9a7c09e76?w=1800&q=85&auto=format&fit=crop&crop=faces" alt="Balayage KO Salon Condesa">
+        </div>
+        <div class="mag-copy">
+          <div class="mag-left">
+            <div class="mag-srv"><span>02 &mdash; Balayage</span></div>
+            <div class="mag-title"><span>Luz</span><span>natural</span></div>
+          </div>
+          <p class="mag-caption">Degradados a mano que se mueven como la luz del sol en el cabello.</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="mag-slide">
+        <div class="mag-img">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1800&q=85&auto=format&fit=crop&crop=faces" alt="Corte KO Salon Condesa">
+        </div>
+        <div class="mag-copy">
+          <div class="mag-left">
+            <div class="mag-srv"><span>03 &mdash; Corte</span></div>
+            <div class="mag-title"><span>La forma</span><span>exacta</span></div>
+          </div>
+          <p class="mag-caption">Precisión y técnica adaptada a tu tipo de cabello y estilo de vida.</p>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="mag-slide">
+        <div class="mag-img">
+          <img src="https://images.unsplash.com/photo-1527736947477-2790e28f3443?w=1800&q=85&auto=format&fit=crop" alt="Mechas KO Salon Condesa">
+        </div>
+        <div class="mag-copy">
+          <div class="mag-left">
+            <div class="mag-srv"><span>04 &mdash; Mechas</span></div>
+            <div class="mag-title"><span>Matices</span><span>de luz</span></div>
+          </div>
+          <p class="mag-caption">Técnicas a mano alzada para un resultado único e irrepetible.</p>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="mag-slide">
+        <div class="mag-img">
+          <img src="https://images.unsplash.com/photo-1487700160041-e0f0b2d2bc28?w=1800&q=85&auto=format&fit=crop" alt="Tratamiento KO Salon Condesa">
+        </div>
+        <div class="mag-copy">
+          <div class="mag-left">
+            <div class="mag-srv"><span>05 &mdash; Tratamiento</span></div>
+            <div class="mag-title"><span>Cabello</span><span>sano</span></div>
+          </div>
+          <p class="mag-caption">Olaplex, Davines y Moroccanoil para restaurar y proteger tu cabello.</p>
+        </div>
+      </div>
+
+    </div><!-- /mag-track -->
+
+    <!-- Counter + arrows -->
+    <div class="mag-hud">
+      <button class="mag-btn" id="magPrev" aria-label="Anterior">&#8592;</button>
+      <div class="mag-count" id="magCount">01 / 05</div>
+      <button class="mag-btn" id="magNext" aria-label="Siguiente">&#8594;</button>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="mag-bar"><div class="mag-bar-fill" id="magBarFill"></div></div>
+
+  </div><!-- /mag-slider -->
+</section>
+
+<!-- ── Contact ── -->
+<section id="contact">
+  <div class="contact-left">
+    <div class="s-tag fade-in">04 / Reserva</div>
+    <h2 class="contact-headline fade-in" style="margin-top:1.5rem">
+      Empecemos<br>a trabajar<br><em>juntos</em>
+    </h2>
+    <a href="https://wa.me/5574265410" target="_blank" rel="noopener" class="btn-fill fade-in">
+      <span>WhatsApp ↗</span>
+    </a>
+    <br><br>
+    <a href="tel:5552110087" class="underline-btn fade-in" style="margin-top:1.2rem">
+      Llamar al salón <span class="ub-arrow">→</span>
+    </a>
+  </div>
+
+  <div class="contact-info">
+    <div class="ci-block fade-in">
+      <div class="ci-label">Ubicación</div>
+      <div class="ci-val">
+        Av Sonora 140<br>Colonia Condesa, CDMX
+      </div>
+    </div>
+
+    <div class="ci-block fade-in">
+      <div class="ci-label">Horario</div>
+      <div class="hours-table">
+        <div class="hours-row">
+          <span class="day">Lunes — Viernes</span>
+          <span>8:00 — 20:00</span>
+        </div>
+        <div class="hours-row">
+          <span class="day">Sábado</span>
+          <span>8:00 — 19:00</span>
+        </div>
+        <div class="hours-row">
+          <span class="day">Domingo</span>
+          <span>9:00 — 16:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ci-block fade-in">
+      <div class="ci-label">Contacto</div>
+      <div class="ci-val">
+        <a href="https://wa.me/5574265410" target="_blank" rel="noopener">
+          WA: 55 7426 5410
+        </a><br>
+        <a href="tel:5552110087">
+          Tel: 55 5211 0087
+        </a>
+      </div>
+    </div>
+
+    <div class="ci-block fade-in">
+      <div class="ci-label">Redes</div>
+      <div class="ci-val">
+        <a href="https://instagram.com/ko.salon" target="_blank" rel="noopener">
+          @ko.salon
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── KO Large ── -->
+<div class="ko-large" aria-hidden="true">
+  <div class="ko-large-text">KO</div>
+</div>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="ft-logo">KO Salon Condesa</div>
+  <div class="ft-copy">© 2025 KO Salon · Av Sonora 140, Condesa, CDMX</div>
+  <div class="ft-links">
+    <a href="https://instagram.com/ko.salon" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://wa.me/5574265410" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://www.facebook.com/KoSalonCDMX/" target="_blank" rel="noopener">Facebook</a>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════════════════ -->
+<script>
+/* ── Cursor ── */
+const dot    = document.getElementById('cur-dot');
+const ring   = document.getElementById('cur-ring');
+const clabel = document.getElementById('cur-label');
+
+let mx = 0, my = 0, rx = 0, ry = 0;
+
+document.addEventListener('mousemove', e => {
+  mx = e.clientX; my = e.clientY;
+  gsap.set(dot, { x: mx, y: my });
+});
+
+(function followRing() {
+  rx += (mx - rx) * 0.09;
+  ry += (my - ry) * 0.09;
+  gsap.set(ring,   { x: rx, y: ry });
+  gsap.set(clabel, { x: rx, y: ry });
+  requestAnimationFrame(followRing);
+})();
+
+function cursorOn(el, type, labelText) {
+  el.addEventListener('mouseenter', () => {
+    document.body.classList.add(type);
+    clabel.textContent = labelText;
+  });
+  el.addEventListener('mouseleave', () => {
+    document.body.classList.remove(type);
+  });
+}
+
+document.querySelectorAll('a').forEach(a => cursorOn(a, 'c-link', 'Ir'));
+document.querySelectorAll('.btn-fill').forEach(b => cursorOn(b, 'c-link', 'Reservar'));
+document.querySelectorAll('.gal-item').forEach(g => cursorOn(g, 'c-img', 'Ver'));
+
+
+/* ── Loader ── */
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  const letters = loader.querySelectorAll('.ld-logo span');
+
+  gsap.to(letters, {
+    y: 0, duration: .9, stagger: .12, ease: 'power4.out', delay: .15
+  });
+
+  gsap.to(loader, {
+    opacity: 0, duration: .7, delay: 1.8, ease: 'power2.inOut',
+    onComplete: () => {
+      loader.style.display = 'none';
+      heroIn();
+    }
+  });
+});
+
+
+/* ── Hero entrance ── */
+function heroIn() {
+  gsap.to('.hero-eyebrow span', { y: 0, duration: 1, ease: 'power4.out', delay: .05 });
+  gsap.to('.hero-title .line span', {
+    y: 0, duration: 1.3, ease: 'power4.out', stagger: .14, delay: .1
+  });
+  gsap.to('.hero-sub span', { y: 0, duration: 1, ease: 'power4.out', delay: .5 });
+}
+
+
+/* ── Lenis smooth scroll ── */
+const lenis = new Lenis({
+  duration: 1.35,
+  easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+});
+
+lenis.on('scroll', ScrollTrigger.update);
+
+gsap.ticker.add(time => lenis.raf(time * 1000));
+gsap.ticker.lagSmoothing(0);
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+/* ── Nav scroll state ── */
+const nav = document.getElementById('nav');
+ScrollTrigger.create({
+  start: 'top -60px',
+  onEnter:     () => nav.classList.add('scrolled'),
+  onLeaveBack: () => nav.classList.remove('scrolled'),
+});
+
+
+/* ── Fade-in on scroll ── */
+gsap.utils.toArray('.fade-in').forEach(el => {
+  gsap.fromTo(el,
+    { opacity: 0, y: 36 },
+    {
+      opacity: 1, y: 0,
+      duration: .85, ease: 'power3.out',
+      scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+    }
+  );
+});
+
+
+/* ── Service items stagger ── */
+gsap.utils.toArray('.srv-item').forEach((el, i) => {
+  gsap.fromTo(el,
+    { opacity: 0, y: 28 },
+    {
+      opacity: 1, y: 0,
+      duration: .7, ease: 'power3.out',
+      delay: (i % 2) * .08,
+      scrollTrigger: { trigger: el, start: 'top 90%', once: true }
+    }
+  );
+});
+
+
+/* ── Magazine Slider ── */
+(function() {
+  const slider  = document.getElementById('magSlider');
+  const track   = document.getElementById('magTrack');
+  const prevBtn = document.getElementById('magPrev');
+  const nextBtn = document.getElementById('magNext');
+  const counter = document.getElementById('magCount');
+  const barFill = document.getElementById('magBarFill');
+  const slides  = Array.from(track.querySelectorAll('.mag-slide'));
+  const total   = slides.length;
+  let current   = 0;
+  let busy      = false;
+
+  function pad(n) { return String(n + 1).padStart(2, '0'); }
+
+  /* init: hide text on all slides except first */
+  slides.forEach((sl, i) => {
+    if (i === 0) return;
+    gsap.set(sl.querySelectorAll('.mag-srv span, .mag-title span'), { y: '112%' });
+    gsap.set(sl.querySelector('.mag-caption'), { opacity: 0, y: 12 });
+    gsap.set(sl.querySelector('.mag-img'), { x: '8%' });
+  });
+
+  barFill.style.width = `${(1 / total) * 100}%`;
+
+  function goTo(next, dir) {
+    if (busy || next === current) return;
+    busy = true;
+
+    const from = current;
+    current = (next + total) % total;
+    const sign = dir > 0 ? 1 : -1;
+
+    counter.textContent = `${pad(current)} / ${pad(total - 1)}`;
+    barFill.style.width = `${((current + 1) / total) * 100}%`;
+
+    /* slide track */
+    gsap.to(track, {
+      x: -current * slider.offsetWidth,
+      duration: 1.1, ease: 'power4.inOut',
+      onComplete: () => { busy = false; }
+    });
+
+    /* text OUT (prev slide) */
+    const fromSl = slides[from];
+    gsap.to(fromSl.querySelectorAll('.mag-srv span, .mag-title span'), {
+      y: sign * -115 + '%', duration: .45, ease: 'power3.in', stagger: .04
+    });
+    gsap.to(fromSl.querySelector('.mag-caption'), { opacity: 0, y: -10, duration: .35, ease: 'power2.in' });
+
+    /* image parallax OUT */
+    gsap.to(fromSl.querySelector('.mag-img'), {
+      x: sign * -7 + '%', duration: 1.1, ease: 'power4.inOut'
+    });
+
+    /* text IN (next slide) */
+    const toSl = slides[current];
+    gsap.fromTo(toSl.querySelectorAll('.mag-srv span, .mag-title span'),
+      { y: sign * 115 + '%' },
+      { y: '0%', duration: .85, ease: 'power4.out', stagger: .07, delay: .5 }
+    );
+    gsap.fromTo(toSl.querySelector('.mag-caption'),
+      { opacity: 0, y: 14 },
+      { opacity: 1, y: 0, duration: .8, ease: 'power3.out', delay: .75 }
+    );
+
+    /* image parallax IN */
+    gsap.fromTo(toSl.querySelector('.mag-img'),
+      { x: sign * 7 + '%' },
+      { x: '0%', duration: 1.1, ease: 'power4.inOut' }
+    );
+  }
+
+  prevBtn.addEventListener('click', () => goTo(current - 1, -1));
+  nextBtn.addEventListener('click', () => goTo(current + 1,  1));
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft')  goTo(current - 1, -1);
+    if (e.key === 'ArrowRight') goTo(current + 1,  1);
+  });
+
+  /* drag / swipe */
+  let startX = 0, dragging = false;
+  slider.addEventListener('pointerdown', e => { startX = e.clientX; dragging = true; slider.classList.add('is-dragging'); });
+  window.addEventListener('pointerup', e => {
+    if (!dragging) return;
+    dragging = false;
+    slider.classList.remove('is-dragging');
+    const dx = e.clientX - startX;
+    if (Math.abs(dx) > 55) goTo(current + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1);
+  });
+
+  window.addEventListener('resize', () => {
+    gsap.set(track, { x: -current * slider.offsetWidth });
+  });
+
+  /* cursor hint on slider */
+  slider.addEventListener('mouseenter', () => document.body.classList.add('c-img'));
+  slider.addEventListener('mouseleave', () => document.body.classList.remove('c-img'));
+})();
+
+
+/* ── Hero parallax ── */
+gsap.to('.hero-title', {
+  y: '-18%', ease: 'none',
+  scrollTrigger: {
+    trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true
+  }
+});
+
+/* ── KO large parallax ── */
+gsap.fromTo('.ko-large-text',
+  { x: '-5%' },
+  {
+    x: '5%', ease: 'none',
+    scrollTrigger: {
+      trigger: '.ko-large', start: 'top bottom', end: 'bottom top', scrub: true
+    }
+  }
+);
+
+
+/* ── Magnetic buttons ── */
+document.querySelectorAll('.btn-fill, .nav-cta').forEach(btn => {
+  btn.addEventListener('mousemove', e => {
+    const r = btn.getBoundingClientRect();
+    gsap.to(btn, {
+      x: (e.clientX - r.left - r.width  / 2) * .25,
+      y: (e.clientY - r.top  - r.height / 2) * .25,
+      duration: .4, ease: 'power2.out'
+    });
+  });
+  btn.addEventListener('mouseleave', () => {
+    gsap.to(btn, { x: 0, y: 0, duration: .7, ease: 'elastic.out(1,.45)' });
+  });
+});
+
+
+/* ── Brand words scramble on hover ── */
+const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+function scramble(el) {
+  const original = el.textContent;
+  let frame = 0;
+
+  const id = setInterval(() => {
+    el.textContent = original.split('').map((ch, i) => {
+      if (i < frame) return original[i];
+      return ch === ' ' ? ' ' : CHARS[Math.floor(Math.random() * 26)];
+    }).join('');
+
+    frame += .8;
+    if (frame >= original.length) {
+      el.textContent = original;
+      clearInterval(id);
+    }
+  }, 30);
+}
+
+document.querySelectorAll('.brand-word').forEach(el => {
+  el.addEventListener('mouseenter', () => scramble(el));
+});
+</script>
+</body>
+</html>
